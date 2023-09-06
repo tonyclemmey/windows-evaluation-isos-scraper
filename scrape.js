@@ -74,12 +74,12 @@ async function main(name) {
         );
 
         var targets = {
-            "windows-10":          [/ltsc/i, "https://www.microsoft.com/en-gb/evalcenter/download-windows-10-enterprise"],
-            "windows-11":          [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-11-enterprise"],
-            "windows-server-2019": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2019"],
-            "windows-server-2022": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2022"],
-            // "sql-server-2019":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2019"],
-            // "sql-server-2022":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2022"],
+            "windows-10":   [/ltsc/i, "https://www.microsoft.com/en-gb/evalcenter/download-windows-10-enterprise"],
+            "windows-11":   [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-11-enterprise"],
+            "windows-2019": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2019"],
+            "windows-2022": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2022"],
+            // "sql-2019":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2019"],
+            // "sql-2022":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2022"],
         };
         const target = targets[name];
         if (!target) {
