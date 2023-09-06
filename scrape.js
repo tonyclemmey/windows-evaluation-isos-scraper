@@ -78,6 +78,8 @@ async function main(name) {
             "windows-11":   [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-11-enterprise"],
             "windows-2019": [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019"],
             "windows-2022": [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022"],
+            "sql-2019":     [null,    "https://www.microsoft.com/en-us/evalcenter/download-sql-server-2019"],
+            "sql-2022":     [null,    "https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022"],
         };
         const target = targets[name];
         if (!target) {

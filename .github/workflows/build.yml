@@ -3,6 +3,7 @@ on:
   push:
   schedule:
     #- cron: '0 * * * *' # hourly.
+    #- cron: '15 11 * * *' # daily.
     - cron: '0 0 * * WED' # every wednesday.
 jobs:
   build:
@@ -14,6 +15,8 @@ jobs:
           - name: windows-11
           - name: windows-2019
           - name: windows-2022
+          - name: sql-2019
+          - name: sql-2022
     runs-on: windows-2022
     steps:
       - name: Checkout
