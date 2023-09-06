@@ -23,7 +23,7 @@ async function getEvaluationIsos(page, filterRegExp, url) {
 
     return await page.evaluate(async (filterRegExp) => {
         var data = [];
-        const els = document.querySelectorAll("a[aria-label*=' ISO '][aria-label*=' 64-bit '][aria-label*='(en-US)']")
+        const els = document.querySelectorAll("a[aria-label*=' ISO '][aria-label*=' 64-bit '][aria-label*='(en-GB)']")
         for (const el of els) {
             const label = el.getAttribute("aria-label");
             if (filterRegExp && !label.match(filterRegExp)) {
@@ -31,7 +31,7 @@ async function getEvaluationIsos(page, filterRegExp, url) {
             }
             const name = label
                 .toLowerCase()
-                .replace(/\s*(download|server|iso|ltsc|enterprise|64-bit|\(en-US\))\s*/ig, " ")
+                .replace(/\s*(download|server|iso|ltsc|enterprise|64-bit|\(en-GB\))\s*/ig, " ")
                 .replace(/[^a-z0-9]+/ig, " ")
                 .trim()
                 .replace(" ", "-");
@@ -74,12 +74,12 @@ async function main(name) {
         );
 
         var targets = {
-            "windows-10":   [/ltsc/i, "https://www.microsoft.com/en-us/evalcenter/download-windows-10-enterprise"],
-            "windows-11":   [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-11-enterprise"],
-            "windows-2019": [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019"],
-            "windows-2022": [null,    "https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022"],
-            "sql-2019":     [null,    "https://www.microsoft.com/en-us/evalcenter/download-sql-server-2019"],
-            "sql-2022":     [null,    "https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022"],
+            "windows-10":   [/ltsc/i, "https://www.microsoft.com/en-gb/evalcenter/download-windows-10-enterprise"],
+            "windows-11":   [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-11-enterprise"],
+            "windows-2019": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2019"],
+            "windows-2022": [null,    "https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2022"],
+            // "sql-2019":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2019"],
+            // "sql-2022":     [null,    "https://www.microsoft.com/en-gb/evalcenter/download-sql-server-2022"],
         };
         const target = targets[name];
         if (!target) {

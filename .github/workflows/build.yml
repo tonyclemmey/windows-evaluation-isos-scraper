@@ -15,8 +15,8 @@ jobs:
           - name: windows-11
           - name: windows-2019
           - name: windows-2022
-          - name: sql-2019
-          - name: sql-2022
+          # - name: sql-2019
+          # - name: sql-2022
     runs-on: windows-2022
     steps:
       - name: Checkout
